@@ -10,6 +10,25 @@ html {
   box-sizing: inherit;
 }
 
+.nav {
+  font-family: 'Bungee', cursive;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+main {
+  display: flex;
+  width: 90%;
+  background-color: black;
+  color: aqua;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
 /*
  * Global layout stuff
  */

@@ -1,0 +1,24 @@
+nav {
+  height: 120px;
+  width: 100%;
+  background-color: #4056a1;
+  background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+  color: #ffff;
+  display: flex;
+  font-family: 'Bungee', cursive !important;  
+  justify-content: space-between; 
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+
+}
+
+.newTweet {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.arrow {
+  display: flex;
+  justify-content: center;
+}

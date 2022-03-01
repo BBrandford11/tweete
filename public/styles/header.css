@@ -1,0 +1,11 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  height: 400;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(190, 133, 10);
+  color: floralwhite;
+  background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+}
