@@ -21,8 +21,6 @@ body {
 main {
   display: flex;
   width: 90%;
-  background-color: black;
-  color: aqua;
   align-items: center;
   justify-content: center;
   margin-left: 5%;
