@@ -64,12 +64,35 @@
     <main class="container">
       <section class="new-tweet">
         <form method="post" action="/tweets/">
-          <textarea class="input" name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+          <textarea
+            class="input"
+            name="text"
+            id="tweet-text"
+            placeholder="What are you humming about?"
+          ></textarea>
           <div class="counter">
-          <button class="button-71" role="button">Tweet</button>
-          <output name="counter" id="red" class="counter1" for="tweet-text">140</output>
+            <button class="button-71" role="button">Tweet</button>
+            <output name="counter" id="red" class="counter1" for="tweet-text"
+              >140</output
+            >
           </div>
         </form>
+      </section>
+
+      <section class="displayTweet">
+        <header>
+          <p><img src="https://i.imgur.com/2WZtOD6.png" /> " /name</p>
+          <p>@Bryce</p>
+        </header>
+        <div class="showTweets">content</div>
+        <footer>
+          <p>10 days ago</p>
+          <ul>
+            <li class="fa-solid fa-flag"></li>
+            <li class="fa-solid fa-retweet"></li>
+            <li class="fa-solid fa-heart"></li>
+          </ul>
+        </footer>
       </section>
     </main>
   </body>

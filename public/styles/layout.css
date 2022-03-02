@@ -6,16 +6,18 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
 .nav {
-  font-family: 'Bungee', cursive;
+  font-family: "Bungee", cursive;
 }
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 main {
@@ -24,12 +26,7 @@ main {
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  
 }
-
-/*
- * Global layout stuff
- */
 
 body {
   color: #545149;
