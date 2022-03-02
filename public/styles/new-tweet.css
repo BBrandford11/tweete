@@ -9,6 +9,10 @@
   flex-direction: column;
 }
 
+#tweetContainer {
+  width: 100%;
+}
+
 .displayTweet {
   display: flex;
   flex-direction: column;
