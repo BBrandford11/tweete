@@ -12,12 +12,15 @@ html {
   box-sizing: inherit;
 }
 
-.nav {
-  font-family: "Bungee", cursive;
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 body {
   font-family: "Source Sans Pro", sans-serif;
+  margin-top: 120px;
 }
 
 main {

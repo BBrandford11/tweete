@@ -57,6 +57,10 @@
   resize: none;
 }
 
+.fa-flag:hover, .fa-retweet:hover, .fa-heart:hover  {
+  color: rgb(190, 133, 10);
+}
+
 .button-71 {
   background-color: #0078d0;
   border: 0;
@@ -104,3 +108,4 @@
     padding: 16px 48px;
   }
 }
+

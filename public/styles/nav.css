@@ -4,21 +4,25 @@ nav {
   background-color: #4056a1;
   background-image: url("https://www.transparenttextures.com/patterns/arches.png");
   color: #ffff;
-  display: flex;
-  font-family: 'Bungee', cursive !important;  
+  display: flex;  
   justify-content: space-between; 
   padding-left: 1.5em;
   padding-right: 1.5em;
+  align-items: center;
 
+}
+
+nav > p {
+  font-family: 'Bungee', cursive;
 }
 
 .newTweet {
   display: flex;
   flex-direction: column;
+  align-items: center;
   
 }
 
-.arrow {
-  display: flex;
-  justify-content: center;
+.fa-angles-down {
+  color: red;
 }

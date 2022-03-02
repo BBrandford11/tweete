@@ -27,14 +27,6 @@ $(document).ready(function () {
       $(this).css("box-shadow", "0px 0px 0px #888");
     });
 
-  $(".fa-solid fa-retweet")
-    .mouseover(function () {
-      console.log("first2222")
-      $(this).css("color", "#ff0000");
-    })
-    .mouseleave(function () {
-      $(this).css("color", "#ffffff");
-    });
-
+  
   // --- our code goes here ---
 });
