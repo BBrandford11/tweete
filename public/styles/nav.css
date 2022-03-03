@@ -27,3 +27,20 @@ nav > p {
 .fa-angles-down {
   color: red;
 }
+
+@media only screen and (min-width: 1px) {
+  nav {
+    display: flex;
+    background-color: rgb(190, 133, 10);
+    background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+  }
+
+}
+
+@media only screen and (min-width: 1024px) {
+  nav {
+    background-color:#4056a1 ;
+    background-image: url("https://www.transparenttextures.com/patterns/arches.png") ;
+  }
+  
+}
