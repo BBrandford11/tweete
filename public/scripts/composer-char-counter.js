@@ -28,11 +28,11 @@ $(document).ready(function () {
       return false;
     }
     
-    let serialzie = $(".input").serialize();
+    let serialize = $(".input").serialize();
     $.ajax({
       url: "/tweets",
       method: "POST",
-      data: serialzie,
+      data: serialize,
     })
       .then(function (data) {
         console.log("Passed", data);
