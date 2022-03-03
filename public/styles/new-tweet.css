@@ -13,7 +13,6 @@
   width: 100%;
 }
 
-
 .displayTweet {
   display: flex;
   flex-direction: column;
@@ -21,8 +20,6 @@
   width: 100%;
   border: 2px solid black;
   margin-top: 25px;
-  
-  
 }
 
 .displayTweet header {
@@ -72,12 +69,23 @@
   font-family: Roboto, sans-serif;
   text-align: center;
   align-self: center;
-  display: none; 
+  display: none;
   margin-bottom: 40;
-  
 }
 
-.fa-flag:hover, .fa-retweet:hover, .fa-heart:hover  {
+.displayTweet:hover {
+  box-shadow: 10px 10px 5px #888;
+}
+
+.button-71:hover {
+  box-shadow: rgba(255, 255, 255, 0.2) 0 3px 15px inset,
+    rgba(0, 0, 0, 0.1) 0 3px 5px, rgba(0, 0, 0, 0.1) 0 10px 13px;
+  transform: scale(1.05);
+}
+
+.fa-flag:hover,
+.fa-retweet:hover,
+.fa-heart:hover {
   color: rgb(190, 133, 10);
 }
 
@@ -117,15 +125,8 @@
   width: 92%;
 }
 
-.button-71:hover {
-  box-shadow: rgba(255, 255, 255, 0.2) 0 3px 15px inset,
-    rgba(0, 0, 0, 0.1) 0 3px 5px, rgba(0, 0, 0, 0.1) 0 10px 13px;
-  transform: scale(1.05);
-}
-
 @media (min-width: 768px) {
   .button-71 {
     padding: 16px 48px;
   }
 }
-

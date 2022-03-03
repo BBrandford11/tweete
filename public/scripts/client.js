@@ -1,6 +1,19 @@
 $(document).ready(function () {
   const $input = $(".input");
 
+  // $(".displayTweet")
+  //   .mouseover(function () {
+  //     $(this).css("box-shadow", "10px 10px 5px #888");
+  //   })
+  //   .mouseleave(function () {
+  //     $(this).css("box-shadow", "0px 0px 0px #888");
+  //   });
+
+  $(".newTweet").click(function () {
+    $(".new-tweet").slideToggle();
+    $input.val("").focus();
+  });
+
   const renderTweets = function (tweets) {
     for (let t in tweets) {
       const type = createTweetElement(tweets[t]);
@@ -68,6 +81,8 @@ $(document).ready(function () {
       });
     $input.val("").focus();
   });
+
+  
 
   loadTweets();
 });
