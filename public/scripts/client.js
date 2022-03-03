@@ -44,11 +44,11 @@ $(document).ready(function () {
   $("form").submit(function (event) {
     event.preventDefault();
     if ($(".input").val() === "" || $(".input").val() === null) {
-      alert("Please enter a tweet!");
+      $(".errors").html("⚠ Please enter a tweet. ⚠").slideDown();
       return false;
     }
     if ($(".input").val().length > 140) {
-      alert("Tweets can only be 140 characters long!");
+      $(".errors").html("⚠ Please enter a tweet uner 140 charasters. ⚠").slideDown();
       return false;
     }
 
@@ -60,6 +60,7 @@ $(document).ready(function () {
     })
       .then(function (data) {
         console.log("Passed", data);
+        $('.errors').slideUp();
         loadTweets();
       })
       .catch(function (error) {

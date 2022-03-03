@@ -7,6 +7,8 @@ $(document).ready(function () {
     $(".counter1").text(reamining);
     if (reamining < 0) {
       $(".counter1").css("color", "#ff0000");
+    }else {
+      $(".counter1").css("color", "#000000");
     }
   });
 
@@ -17,6 +19,13 @@ $(document).ready(function () {
     .mouseleave(function () {
       $(this).css("box-shadow", "0px 0px 0px #888");
     });
+
+    $(".newTweet").click(function(){
+      $('.new-tweet').slideToggle()      
+      $input.val("").focus();
+    });
+
+    
 
   // --- our code goes here ---
 });
