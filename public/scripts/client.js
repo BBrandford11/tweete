@@ -1,29 +1,5 @@
 $(document).ready(function () {
-  
-  // const data = [
-  //   {
-  //     user: {
-  //       name: "Newton",
-  //       avatars: "https://i.imgur.com/73hZDYK.png",
-  //       handle: "@SirIsaac",
-  //     },
-  //     content: {
-  //       text: "If I have seen further it is by standing on the shoulders of giants",
-  //     },
-  //     created_at: 1461116232227,
-  //   },
-  //   {
-  //     user: {
-  //       name: "Descartes",
-  //       avatars: "https://i.imgur.com/nlhLi3I.png",
-  //       handle: "@rd",
-  //     },
-  //     content: {
-  //       text: "Je pense , donc je suis",
-  //     },
-  //     created_at: 1469088,
-  //   },
-  // ];
+  const $input = $(".input");
 
   const renderTweets = function (tweets) {
     for (let t in tweets) {
@@ -31,7 +7,7 @@ $(document).ready(function () {
       $("#tweetContainer").prepend(type);
     }
   };
-  
+
   const createTweetElement = function (data1) {
     const $tweet = `<article class="displayTweet"> <header>      
     <p><img src="${data1.user.avatars}" /> ${data1.user.name}</p>
@@ -51,23 +27,46 @@ $(document).ready(function () {
     return $tweet;
   };
 
-  const loadTweets = function() {
+  const loadTweets = function () {
     $.ajax({
       url: "http://localhost:8080/tweets",
       method: "GET",
-      
     })
       .then(function (data) {
-        console.log("Passed2", data);        
-        renderTweets(data)
+        console.log("Passed2", data);
+        renderTweets(data);
       })
       .catch(function (error) {
         console.log("error2", error);
       });
-  }
+  };
 
+  $("form").submit(function (event) {
+    event.preventDefault();
+    if ($(".input").val() === "" || $(".input").val() === null) {
+      alert("Please enter a tweet!");
+      return false;
+    }
+    if ($(".input").val().length > 140) {
+      alert("Tweets can only be 140 characters long!");
+      return false;
+    }
 
-  
-  loadTweets()
-  
+    let serialize = $(".input").serialize();
+    $.ajax({
+      url: "/tweets",
+      method: "POST",
+      data: serialize,
+    })
+      .then(function (data) {
+        console.log("Passed", data);
+        loadTweets();
+      })
+      .catch(function (error) {
+        console.log("error", error);
+      });
+    $input.val("").focus();
+  });
+
+  loadTweets();
 });
