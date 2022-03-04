@@ -1,7 +1,7 @@
 $(document).ready(function () {
   const $input = $(".input");
   const btn = $("#myBtn");
-
+ // scroll up button function
   $(window).scroll(function () {
     if ($(window).scrollTop() > 50) {
       btn.addClass("show");
@@ -14,19 +14,19 @@ $(document).ready(function () {
     e.preventDefault();
     $("html, body").animate({ scrollTop: 0 }, "300");
   });
-
+  //resets tweet input form after submiting a tweet
   $(".newTweet").click(function () {
     $(".new-tweet").slideToggle();
     $input.val("").focus();
   });
-
+  //loops thru the database and calls create tweet to sytle each one and prepend it to the body
   const renderTweets = function (tweets) {
     for (let t in tweets) {
       const type = createTweetElement(tweets[t]);
       $("#tweetContainer").prepend(type);
     }
   };
-
+  // takes in a tweet and applies the correct htmls styles for it
   const createTweetElement = function (data1) {
     const $tweet = `<article class="displayTweet"> <header>      
     <p><img src="${data1.user.avatars}" /> ${data1.user.name}</p>
@@ -45,14 +45,14 @@ $(document).ready(function () {
 
     return $tweet;
   };
-
+  // ajax get request to get all the tweets from database
   const loadTweets = function () {
     $.ajax({
       url: "http://localhost:8080/tweets",
       method: "GET",
     })
       .then(function (data) {
-        console.log("Passed2", data);
+        
         renderTweets(data);
       })
       .catch(function (error) {
@@ -60,6 +60,7 @@ $(document).ready(function () {
       });
   };
 
+  //ajax post request and handling of errors if tweet is empty or over 140 characters 
   $("form").submit(function (event) {
     event.preventDefault();
     if ($(".input").val() === "" || $(".input").val() === null) {
@@ -80,7 +81,6 @@ $(document).ready(function () {
       data: serialize,
     })
       .then(function (data) {
-        console.log("Passed", data);
         $(".errors").slideUp();
         loadTweets();
       })
@@ -89,6 +89,6 @@ $(document).ready(function () {
       });
     $input.val("").focus();
   });
-
+  //calls the load tweet function to start the loop of tweets 
   loadTweets();
 });

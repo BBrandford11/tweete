@@ -77,7 +77,7 @@
   display: none;
   margin-bottom: 40;
 }
-
+/* //Hover funstions// */
 .displayTweet:hover {
   box-shadow: 10px 10px 5px #888;
 }
@@ -93,7 +93,7 @@
 .fa-heart:hover {
   color: rgb(190, 133, 10);
 }
-
+/* //Tweet button taken from online// */
 .button-71 {
   background-color: #0078d0;
   border: 0;

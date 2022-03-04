@@ -9,7 +9,7 @@
   color: floralwhite;
   background-image: url("https://www.transparenttextures.com/patterns/arches.png");
 }
-
+/* // dynamic screen depending on width of screen// */
 @media only screen and (min-width: 1024px) {
   .lower {
     display: flex;
@@ -29,5 +29,5 @@
     margin: 2%;
   }
 
-  /* Write CSS rules that target Laptop/Desktop screen sizes and beyond */
+  
 }

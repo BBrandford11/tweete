@@ -9,6 +9,7 @@ nav {
   padding-left: 1.5em;
   padding-right: 1.5em;
   align-items: center;
+  z-index: 1;
 }
 
 nav > p {
@@ -25,6 +26,7 @@ nav > p {
 .fa-angles-down {
   color: red;
 }
+/* // arrow down animation // */
 @keyframes updown {
   0% {
     transform: translateY(-30%);
@@ -40,6 +42,8 @@ nav > p {
   color: red;
   animation: updown 2s ease infinite;
 }
+
+/* // dynamic screen depending on width of screen// */
 
 @media only screen and (min-width: 1px) {
   nav {
