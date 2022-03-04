@@ -1,20 +1,19 @@
 $(document).ready(function () {
   const $input = $(".input");
-  const  btn = $('#myBtn');
+  const btn = $("#myBtn");
 
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     if ($(window).scrollTop() > 50) {
-      btn.addClass('show');
+      btn.addClass("show");
     } else {
-      btn.removeClass('show');
+      btn.removeClass("show");
     }
   });
 
-  btn.on('click', function(e) {
+  btn.on("click", function (e) {
     e.preventDefault();
-    $('html, body').animate({scrollTop:0}, '300');
+    $("html, body").animate({ scrollTop: 0 }, "300");
   });
-
 
   $(".newTweet").click(function () {
     $(".new-tweet").slideToggle();
@@ -68,7 +67,9 @@ $(document).ready(function () {
       return false;
     }
     if ($(".input").val().length > 140) {
-      $(".errors").html("⚠ Please enter a tweet uner 140 charasters. ⚠").slideDown();
+      $(".errors")
+        .html("⚠ Please enter a tweet uner 140 charasters. ⚠")
+        .slideDown();
       return false;
     }
 
@@ -80,7 +81,7 @@ $(document).ready(function () {
     })
       .then(function (data) {
         console.log("Passed", data);
-        $('.errors').slideUp();
+        $(".errors").slideUp();
         loadTweets();
       })
       .catch(function (error) {
@@ -88,8 +89,6 @@ $(document).ready(function () {
       });
     $input.val("").focus();
   });
-
-  
 
   loadTweets();
 });

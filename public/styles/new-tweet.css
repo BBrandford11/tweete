@@ -11,7 +11,6 @@
 
 #tweetContainer {
   width: 100%;
-  
 }
 
 .profilePic {
@@ -101,7 +100,7 @@
   border-radius: 56px;
   color: #fff;
   cursor: pointer;
-  display: inline-block;
+  display: flex;
   font-family: system-ui, -apple-system, system-ui, "Segoe UI", Roboto, Ubuntu,
     "Helvetica Neue", sans-serif;
   font-size: 18px;
@@ -125,7 +124,6 @@
   height: 50%;
   left: 4%;
   opacity: 0.5;
-  position: absolute;
   top: 0;
   transition: all 0.3s;
   width: 92%;
