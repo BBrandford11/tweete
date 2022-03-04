@@ -14,11 +14,13 @@ $(document).ready(function () {
     e.preventDefault();
     $("html, body").animate({ scrollTop: 0 }, "300");
   });
+  
   //resets tweet input form after submiting a tweet
   $(".newTweet").click(function () {
     $(".new-tweet").slideToggle();
     $input.val("").focus();
   });
+
   //loops thru the database and calls create tweet to sytle each one and prepend it to the body
   const renderTweets = function (tweets) {
     for (let t in tweets) {
@@ -26,6 +28,7 @@ $(document).ready(function () {
       $("#tweetContainer").prepend(type);
     }
   };
+
   // takes in a tweet and applies the correct htmls styles for it
   const createTweetElement = function (data1) {
     const $tweet = `<article class="displayTweet"> <header>      
@@ -45,6 +48,7 @@ $(document).ready(function () {
 
     return $tweet;
   };
+
   // ajax get request to get all the tweets from database
   const loadTweets = function () {
     $.ajax({
