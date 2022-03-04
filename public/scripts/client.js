@@ -1,13 +1,20 @@
 $(document).ready(function () {
   const $input = $(".input");
+  const  btn = $('#myBtn');
 
-  // $(".displayTweet")
-  //   .mouseover(function () {
-  //     $(this).css("box-shadow", "10px 10px 5px #888");
-  //   })
-  //   .mouseleave(function () {
-  //     $(this).css("box-shadow", "0px 0px 0px #888");
-  //   });
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > 50) {
+      btn.addClass('show');
+    } else {
+      btn.removeClass('show');
+    }
+  });
+
+  btn.on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({scrollTop:0}, '300');
+  });
+
 
   $(".newTweet").click(function () {
     $(".new-tweet").slideToggle();
