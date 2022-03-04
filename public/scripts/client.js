@@ -1,7 +1,7 @@
 $(document).ready(function () {
   const $input = $(".input");
   const btn = $("#myBtn");
- // scroll up button function
+  // scroll up button function
   $(window).scroll(function () {
     if ($(window).scrollTop() > 50) {
       btn.addClass("show");
@@ -52,7 +52,6 @@ $(document).ready(function () {
       method: "GET",
     })
       .then(function (data) {
-        
         renderTweets(data);
       })
       .catch(function (error) {
@@ -60,7 +59,7 @@ $(document).ready(function () {
       });
   };
 
-  //ajax post request and handling of errors if tweet is empty or over 140 characters 
+  //ajax post request and handling of errors if tweet is empty or over 140 characters
   $("form").submit(function (event) {
     event.preventDefault();
     if ($(".input").val() === "" || $(".input").val() === null) {
@@ -89,6 +88,6 @@ $(document).ready(function () {
       });
     $input.val("").focus();
   });
-  //calls the load tweet function to start the loop of tweets 
+  //calls the load tweet function to start the loop of tweets
   loadTweets();
 });
