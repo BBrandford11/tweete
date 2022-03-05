@@ -75,9 +75,9 @@ $(document).ready(function () {
       $(".errors").html("⚠ Please enter a tweet. ⚠").slideDown();
       return false;
     }
-    if ($(".input").val().length > 140) {
+    if (inputVal.length > 140) {
       $(".errors")
-        .html("⚠ Please enter a tweet uner 140 charasters. ⚠")
+        .html("⚠ Please enter a tweet under 140 charasters. ⚠")
         .slideDown();
       return false;
     }
