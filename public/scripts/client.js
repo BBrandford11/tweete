@@ -86,6 +86,7 @@ $(document).ready(function () {
       .then(function (data) {
         $(".errors").slideUp();
         loadTweets();
+        $(".counter1").text(140)
       })
       .catch(function (error) {
         console.log("error", error);
