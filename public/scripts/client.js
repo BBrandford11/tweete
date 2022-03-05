@@ -14,7 +14,7 @@ $(document).ready(function () {
     e.preventDefault();
     $("html, body").animate({ scrollTop: 0 }, "300");
   });
-  
+
   //resets tweet input form after submiting a tweet
   $(".newTweet").click(function () {
     $(".new-tweet").slideToggle();
@@ -23,10 +23,11 @@ $(document).ready(function () {
 
   //loops thru the database and calls create tweet to sytle each one and prepend it to the body
   const renderTweets = function (tweets) {
+    let type;
     for (let t in tweets) {
-      const type = createTweetElement(tweets[t]);
-      $("#tweetContainer").prepend(type);
+      type = createTweetElement(tweets[t]);
     }
+    $("#tweetContainer").prepend(type);
   };
 
   // takes in a tweet and applies the correct htmls styles for it
@@ -86,7 +87,7 @@ $(document).ready(function () {
       .then(function (data) {
         $(".errors").slideUp();
         loadTweets();
-        $(".counter1").text(140)
+        $(".counter1").text(140);
       })
       .catch(function (error) {
         console.log("error", error);
