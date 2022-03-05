@@ -1,6 +1,9 @@
 $(document).ready(function () {
   const $input = $(".input");
+  
   const btn = $("#myBtn");
+
+
   // scroll up button function
   $(window).scroll(function () {
     if ($(window).scrollTop() > 50) {
@@ -66,8 +69,9 @@ $(document).ready(function () {
 
   //ajax post request and handling of errors if tweet is empty or over 140 characters
   $("form").submit(function (event) {
+    const inputVal = $(".input").val();
     event.preventDefault();
-    if ($(".input").val() === "" || $(".input").val() === null) {
+    if (!inputVal) {
       $(".errors").html("⚠ Please enter a tweet. ⚠").slideDown();
       return false;
     }
