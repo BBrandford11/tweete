@@ -27,10 +27,11 @@ $(document).ready(function () {
   //loops thru the database and calls create tweet to sytle each one and prepend it to the body
   const renderTweets = function (tweets) {
     let type;
+    $("#tweetContainer").empty();
     for (let t in tweets) {
       type = createTweetElement(tweets[t]);
+      $("#tweetContainer").prepend(type);
     }
-    $("#tweetContainer").prepend(type);
   };
 
   // takes in a tweet and applies the correct htmls styles for it
