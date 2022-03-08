@@ -1,7 +1,7 @@
 $(document).ready(function () {
   const $input = $(".input");
   //function to change countdown based on characters inputed//
-  $(".new-tweet").keydown(() => {
+  $(".new-tweet").on("input", function () {
     const inputVal = $input.val();
     const reamining = 140 - $(".input").val().length;
     $(".counter1").text(reamining);
