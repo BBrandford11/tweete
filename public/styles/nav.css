@@ -45,7 +45,7 @@ nav > p {
 
 /* // dynamic screen depending on width of screen// */
 
-@media only screen and (min-width: 1px) {
+@media only screen and (max-width: 1023px) {
   nav {
     display: flex;
     background-color: rgb(190, 133, 10);

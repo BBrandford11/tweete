@@ -3,9 +3,9 @@ $(document).ready(function () {
   //function to change countdown based on characters inputed//
   $(".new-tweet").on("input", function () {
     const inputVal = $input.val();
-    const reamining = 140 - $(".input").val().length;
-    $(".counter1").text(reamining);
-    if (reamining < 0) {
+    const remaining = 140 - $(".input").val().length;
+    $(".counter1").text(remaining);
+    if (remaining < 0) {
       $(".counter1").css("color", "#ff0000");
     } else {
       $(".counter1").css("color", "#000000");

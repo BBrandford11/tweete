@@ -26,23 +26,23 @@ $(document).ready(function () {
 
   //loops thru the database and calls create tweet to sytle each one and prepend it to the body
   const renderTweets = function (tweets) {
-    let type;
+    let tweetToPrepend;
     $("#tweetContainer").empty();
-    for (let t in tweets) {
-      type = createTweetElement(tweets[t]);
-      $("#tweetContainer").prepend(type);
+    for (const tweet in tweets) {
+      tweetToPrepend = createTweetElement(tweets[tweet]);
+      $("#tweetContainer").prepend(tweetToPrepend);
     }
   };
 
   // takes in a tweet and applies the correct htmls styles for it
-  const createTweetElement = function (data1) {
+  const createTweetElement = function (tweet) {
     const $tweet = `<article class="displayTweet"> <header>      
-    <p><img src="${data1.user.avatars}" /> ${data1.user.name}</p>
-    <p>${data1.user.handle}</p>
+    <p><img src="${tweet.user.avatars}" /> ${tweet.user.name}</p>
+    <p>${tweet.user.handle}</p>
     </header>
-      <div class="showTweets">${data1.content.text}</div>
+      <div class="showTweets">${tweet.content.text}</div>
     <footer>
-    <p>${timeago.format(data1.created_at)}</p>
+    <p>${timeago.format(tweet.created_at)}</p>
         <ul class="icons">
         <li class="fa-solid fa-flag"></li>
         <li class="fa-solid fa-retweet"></li>
